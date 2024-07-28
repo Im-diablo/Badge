@@ -25,10 +25,10 @@ async def say(interaction: discord.Interaction, thing_to_say: str):
   await interaction.response.send_message(f"synced {interaction.user.mention} said: `{thing_to_say}`")
   
   url = 'https://drive.google.com/u/0/uc?id=15DCazC9fBFMiBPQNsICrLtAMDIbWlRiJ'
-  output = 'token.txt'
-  gdown.download(url, output, quiet=False)
+output = 'token.txt'
+gdown.download(url, output, quiet=False)
 
 with open('token.txt') as f:
-      TOKEN = f.readline()
+    TOKEN = f.readline()
     
 bot.run(TOKEN)

@@ -24,7 +24,7 @@ async def ping(interaction: discord.Interaction):
 async def say(interaction: discord.Interaction, thing_to_say: str):
   await interaction.response.send_message(f"synced {interaction.user.mention} said: `{thing_to_say}`")
   
-  url = 'https://drive.google.com/u/0/uc?id=15DCazC9fBFMiBPQNsICrLtAMDIbWlRiJ'
+url = 'https://drive.google.com/u/0/uc?id=15DCazC9fBFMiBPQNsICrLtAMDIbWlRiJ'
 output = 'token.txt'
 gdown.download(url, output, quiet=False)
 

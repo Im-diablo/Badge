@@ -9,11 +9,11 @@ bot = commands.Bot(command_prefix="n", intents=discord.Intents.all())
 @bot.event
 async def on_ready():
     print(f"Logged in as {bot.user}")
-try:
-  synced = await bot.tree.sync()
-  print(f"Synced {len(synced)} command(s)")
-except Exception as e:
-    print(e)
+    try:
+        synced = await bot.tree.sync()
+        print(f"Synced {len(synced)} command(s)")
+    except Exception as e:
+        print(e)
 
 
 @bot.tree.command(name="ping")

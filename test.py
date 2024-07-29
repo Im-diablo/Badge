@@ -23,7 +23,7 @@ async def on_ready():
 
 @bot.tree.command(name="ping")
 async def ping(interaction: discord.Interaction):
-  await interaction.response.send_message(f"Hey {interaction.user.mention}! This is a slash command!", ephemeral=True)
+  await interaction.response.send_message(f"Hey {interaction.user.mention}! My latency is {round(bot.latency * 1000)}ms", ephemeral=True)
 
 @bot.tree.command(name="say")
 @app_commands.describe(thing_to_say = "synced")

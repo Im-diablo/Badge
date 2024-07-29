@@ -27,7 +27,7 @@ async def ping(interaction: discord.Interaction):
 
 @bot.tree.command(name="say")
 @app_commands.describe(thing_to_say = "synced")
-async def say(interaction: discord.Interaction, thing_to_say: str):
-  await interaction.response.send_message(f"{interaction.user.mention} said: `{thing_to_say}`")
-
+async def say(interaction: discord.Interaction, thing_to_say: str, to: discord.Member): 
+    await interaction.response.send_message(f"{interaction.user.mention} said: `{thing_to_say}` to '{to.mention}'")
+        
 bot.run(TOKEN)

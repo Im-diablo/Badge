@@ -5,11 +5,11 @@ from discord.ext import commands
 import gdown
 
 bot = commands.Bot(command_prefix="n", intents=discord.Intents.all())
-url = 'https://drive.google.com/u/0/uc?id=1-rCeT404Do7m8Bu3cqXM6uYaniA661lB'
-  output = 'token.txt'
-  gdown.download(url, output, quiet=False)
+url = 'https://drive.google.com/u/0/uc?id=1D0RKtHoBIPLS8EQSVtiYT-DsTxSh9B2R'
+output = 'token.txt'
+gdown.download(url, output, quiet=False)
 
-  with open('token.txt') as f:
+with open('token.txt') as f:
       TOKEN = f.readline()
 @bot.event
 async def on_ready():

@@ -10,7 +10,7 @@ bot = commands.Bot(command_prefix="n", intents=discord.Intents.all())
 async def on_ready():
     print(f"Logged in as {bot.user}")
 try:
-  synced =await bot.tree.sync()
+  synced = await bot.tree.sync()
   print(f"Synced {len(synced)} command(s)")
 except Exception as e:
     print(e)

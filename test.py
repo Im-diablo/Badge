@@ -21,7 +21,7 @@ async def on_ready():
         print(e)
 
 
-@bot.tree.command(name="ping",description="Shows the bot's latency")
+@bot.tree.command(name="ping")
 async def ping(interaction: discord.Interaction):
   await interaction.response.send_message(f"Hey {interaction.user.mention}! My latency is {round(bot.latency * 1000)}ms", ephemeral=True)
 
